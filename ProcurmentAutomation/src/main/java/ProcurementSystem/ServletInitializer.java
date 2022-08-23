@@ -1,4 +1,4 @@
-package uk.ac.bangor.cs.ice2002.group5.procurementsystem;
+package ProcurementSystem;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -1,4 +1,4 @@
-package uk.ac.bangor.cs.ice2002.group5.procurementsystem.web;
+package web;
 
 import java.util.Optional;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository.UserRepository;
-import uk.ac.bangor.cs.ice2002.group5.procurementsystem.security.User;
+import repository.UserRepository;
+import security.User;
 
 
 /**

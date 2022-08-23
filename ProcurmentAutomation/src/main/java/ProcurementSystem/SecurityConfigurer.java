@@ -1,4 +1,4 @@
-package uk.ac.bangor.cs.ice2002.group5.procurementsystem;
+package ProcurementSystem;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -11,7 +11,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.stereotype.Component;
 import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
 
-import uk.ac.bangor.cs.ice2002.group5.procurementsystem.security.RepositoryBasedUserDetailsService;
+import security.RepositoryBasedUserDetailsService;
 
 /**
  * Class is responsible of giving access to user roles according to their privileges.

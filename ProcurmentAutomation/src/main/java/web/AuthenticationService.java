@@ -1,4 +1,4 @@
-package uk.ac.bangor.cs.ice2002.group5.procurementsystem.web;
+package web;
 
 import java.io.Serializable;
 
@@ -7,8 +7,8 @@ import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
-import uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository.RequisitionRepository;
-import uk.ac.bangor.cs.ice2002.group5.procurementsystem.security.User;
+import repository.RequisitionRepository;
+import security.User;
 
 /**
  * User Authentication class

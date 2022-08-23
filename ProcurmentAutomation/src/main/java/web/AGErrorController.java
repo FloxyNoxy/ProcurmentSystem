@@ -1,4 +1,4 @@
-package uk.ac.bangor.cs.ice2002.group5.procurementsystem.web;
+package web;
 
 import javax.servlet.http.HttpServletRequest;
 

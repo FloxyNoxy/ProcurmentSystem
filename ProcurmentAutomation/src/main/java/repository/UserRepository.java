@@ -1,9 +1,9 @@
-package uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository;
+package repository;
 
 
 import org.springframework.data.repository.CrudRepository;
 
-import uk.ac.bangor.cs.ice2002.group5.procurementsystem.security.User;
+import security.User;
 
 /**
  * Interface for Users
