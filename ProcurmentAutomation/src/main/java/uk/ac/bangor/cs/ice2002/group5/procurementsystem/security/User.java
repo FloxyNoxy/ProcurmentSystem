@@ -39,6 +39,7 @@ public class User implements UserDetails{
 		    initialValue = 2,
 		    allocationSize = 1
 		)
+	
 	private Long userID;
 	
 	@Column(length = 255, unique = true, nullable = false, updatable = false)
