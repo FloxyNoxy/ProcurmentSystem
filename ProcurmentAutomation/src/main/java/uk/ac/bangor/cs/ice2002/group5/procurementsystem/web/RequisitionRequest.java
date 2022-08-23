@@ -1,4 +1,4 @@
-package web;
+package uk.ac.bangor.cs.ice2002.group5.procurementsystem.web;
 
 
 import javax.persistence.Column;

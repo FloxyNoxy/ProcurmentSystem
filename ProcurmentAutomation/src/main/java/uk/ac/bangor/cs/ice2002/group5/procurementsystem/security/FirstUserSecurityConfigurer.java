@@ -1,4 +1,4 @@
-package security;
+package uk.ac.bangor.cs.ice2002.group5.procurementsystem.security;
 
 import javax.annotation.PostConstruct;
 
@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import repository.UserRepository;
+import uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository.UserRepository;
 
 /**
  * First User Configuration file

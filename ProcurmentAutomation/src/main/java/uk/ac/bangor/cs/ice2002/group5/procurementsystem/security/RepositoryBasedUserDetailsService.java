@@ -1,4 +1,4 @@
-package security;
+package uk.ac.bangor.cs.ice2002.group5.procurementsystem.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import repository.UserRepository;
+import uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository.UserRepository;
 
 /**
  * Find User by Username Class

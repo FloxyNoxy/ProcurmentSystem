@@ -1,4 +1,4 @@
-package web;
+package uk.ac.bangor.cs.ice2002.group5.procurementsystem.web;
 
 
 
@@ -10,8 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import repository.RequisitionRepository;
-import security.User;
+import uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository.RequisitionRepository;
+import uk.ac.bangor.cs.ice2002.group5.procurementsystem.security.User;
 
 /**
  * Controller to handle filtered database retrieved data for requisitions

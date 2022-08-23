@@ -1,11 +1,11 @@
-package repository;
+package uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository;
 
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import web.RequisitionRequest;
+import uk.ac.bangor.cs.ice2002.group5.procurementsystem.web.RequisitionRequest;
 
 /**
  * Interface for Requisitions

@@ -1,4 +1,4 @@
-package ProcurementSystem;
+package uk.ac.bangor.cs.ice2002.group5.procurementsystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
