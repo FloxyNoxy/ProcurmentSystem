@@ -8,15 +8,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 
+/**
+ * Requisition Constructor class with auto generated ID and defaulted UNDERREVIEW request state
+ * @author Ethan Quilter
+ *
+ */
+
 @Entity
 public class RequisitionRequest {
 
-	
-	/**
-	 * Requisition Constructor class with auto generated ID and defaulted UNDERREVIEW request state
-	 * @author Ethan Quilter
-	 *
-	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_post")
 	@SequenceGenerator(

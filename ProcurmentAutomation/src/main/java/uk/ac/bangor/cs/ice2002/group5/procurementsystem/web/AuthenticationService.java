@@ -10,6 +10,12 @@ import org.springframework.stereotype.Component;
 import uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository.RequisitionRepository;
 import uk.ac.bangor.cs.ice2002.group5.procurementsystem.security.User;
 
+/**
+ * User Authentication class
+ * 
+ * @author Ethan Quilter
+ *
+ */
 @Component(value="AuthenticationService")
 public class AuthenticationService implements PermissionEvaluator {
 	

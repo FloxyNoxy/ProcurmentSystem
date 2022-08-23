@@ -19,7 +19,7 @@ import uk.ac.bangor.cs.ice2002.group5.procurementsystem.security.User;
 
 
 /**
- * COntroller to handle all GET and Post requests for all requisitions
+ * Controller to handle all GET and Post requests for all requisitions
  * @author Ethan Quilter
  *
  */

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository.UserRepository;
 
 /**
+ * First User Configuration file
  * @author Ethan Quilter
  *
  */

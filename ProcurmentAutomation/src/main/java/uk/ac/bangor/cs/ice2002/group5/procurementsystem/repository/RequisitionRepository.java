@@ -7,6 +7,13 @@ import org.springframework.stereotype.Repository;
 
 import uk.ac.bangor.cs.ice2002.group5.procurementsystem.web.RequisitionRequest;
 
+/**
+ * Interface for Requisitions
+ * 
+ * @author Ethan Quilter
+ *
+ */
+
 @Repository
 public interface RequisitionRepository extends CrudRepository<RequisitionRequest, Integer>{
 

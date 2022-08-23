@@ -44,11 +44,10 @@ public class AGErrorController implements ErrorController {
 	    	default:
 	    		return "errors/error";
 	    	  }
-	      } else {
+	      } 
+	      else {
 	    	  return "redirect:/";
 	      }
-	      
-	     
 	}
 	
 	

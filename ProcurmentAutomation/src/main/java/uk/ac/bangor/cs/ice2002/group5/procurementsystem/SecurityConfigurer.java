@@ -14,8 +14,8 @@ import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
 import uk.ac.bangor.cs.ice2002.group5.procurementsystem.security.RepositoryBasedUserDetailsService;
 
 /**
- * @author Ethan Quilter
  * Class is responsible of giving access to user roles according to their privileges.
+ * @author Ethan Quilter
  */
 @Component
 public class SecurityConfigurer extends WebSecurityConfigurerAdapter {

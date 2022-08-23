@@ -8,6 +8,13 @@ import org.springframework.stereotype.Component;
 
 import uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository.UserRepository;
 
+/**
+ * Find User by Username Class
+ * 
+ * @author Ethan Quilter
+ *
+ */
+
 @Component
 public class RepositoryBasedUserDetailsService implements UserDetailsService {
 

@@ -9,6 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import uk.ac.bangor.cs.ice2002.group5.procurementsystem.security.User;
 
 
+/**
+ * Controller for login page
+ * 
+ * @author Ethan Quilter
+ *
+ */
+
 @Controller
 public class LoginController {
 

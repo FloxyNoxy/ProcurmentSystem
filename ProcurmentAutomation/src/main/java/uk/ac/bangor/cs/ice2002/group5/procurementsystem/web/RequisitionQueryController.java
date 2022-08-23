@@ -13,7 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository.RequisitionRepository;
 import uk.ac.bangor.cs.ice2002.group5.procurementsystem.security.User;
 
-
+/**
+ * Controller to handle filtered database retrieved data for requisitions
+ * @author Ethan Quilter
+ *
+ */
 
 @RequestMapping(value = "/requisitions")
 @Controller
@@ -21,11 +25,6 @@ public class RequisitionQueryController {
 	@Autowired // 
 	private RequisitionRepository repo;
 
-	/**
-	 * Controller to handle filtered database retrieved data for requisitions
-	 * @author Ethan Quilter
-	 *
-	 */
 	
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String RequisitionList(Model uiModel) {

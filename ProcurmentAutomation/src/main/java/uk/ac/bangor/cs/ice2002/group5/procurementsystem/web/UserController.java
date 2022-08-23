@@ -18,16 +18,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import uk.ac.bangor.cs.ice2002.group5.procurementsystem.repository.UserRepository;
 import uk.ac.bangor.cs.ice2002.group5.procurementsystem.security.User;
 
+
+/**
+ * User Controller to handle all GET and POST requests for the users handled by the admin
+ * @author Ethan Quilter
+ *
+ */
+
 @RequestMapping(value = "/users")
 @Controller
 public class UserController {
 	
-	
-	/**
-	 * User COntroller to handle all GET and POST requests for the users handled by the admin
-	 * @author Ethan Quilter
-	 *
-	 */
 	@Autowired
 	private PasswordEncoder pwEncoder;
 	
