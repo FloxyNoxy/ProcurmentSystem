@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+<head>
+<meta charset="UTF-8">
+<title>User List</title>
+
+
+
+</head>
+<body layout:fragment="content">
+	<div class="w-100 d-flex flex-column">
+		<h1>Users</h1>
+		<table class="w-100 flex-column table">
+			<thead >
+				<td scope="col"></td>
+				<td scope="col">User ID</td>
+				<td scope="col">First Name</td>
+				<td scope="col">Last Name</td>
+				<td scope="col">Room No.</td>
+				<td scope="col">Phone No.</td>
+				<td scope="col">email</td>
+				<td scope="col">Username</td>
+				<td scope="col">password</td>
+				<td scope="col">user type</td>
+				<td>change type</td>
+			</thead>
+			<tr th:each="request : ${users}">
+				<td><a class="link text-danger" th:href="@{delete/{id}(id=${request.userID})}"><span class="material-icons">delete</span></a></td>
+				<td th:text="${request.userID}"></td>
+				<td th:text="${request.fName}"></td>
+				<td th:text="${request.lName}"></td>
+				<td th:text="${request.roomNumber}"></td>
+				<td th:text="${request.phoneNumber}"></td>
+				<td th:text="${request.email}"></td>
+				<td th:text="${request.username}"></td>
+				<td class="user-password" th:utext="|<a href='@{resetpassword/{id}(id=${request.userID})}'>reset</a>|"></td>
+				<td th:text="${request.role}"></td>
+				<td>
+					<form th:action="@{/users/changerole}" method="POST" class="row">
+					    <select name="role">
+					        <option value="STAFF">Staff</option>
+							<option value="BUDGETHOLDER">Budget Holder</option>
+							<option value="REQUISITIONOFFICER">Requisition Officer</option>
+							<option value="FINANCEOFFICER">Finance Officer</option>
+							<option value="ADMIN">Administrator</option>
+					    </select>
+					    <input type="hidden" name="userID" th:value="${request.userID}" />
+					    <input class="btn btn-dark" type="submit" value="OK" id="submitButton" />
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

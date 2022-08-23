@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+<head>
+<meta charset="UTF-8">
+<title>Requisition List</title>
+</head>
+<body layout:fragment="content">
+	<div class="d-flex w-100 flex-column">
+	<h1>Requisitions</h1>
+	<table class="table">
+		<thead>
+			<td></td>
+			<td>Date Submitted</td>
+			<td>Staff Name</td>
+			<td>Room Number</td>
+			<td>Email</td>
+			<td>Supplier Name</td>
+			<td>Supplier Address</td>
+			<td>Supplier Email</td>
+			<td>Supplier Phone Number</td>
+			<td>Item</td>
+			<td>Item Description</td>
+			<td>Quantity</td>
+			<td>Estimated Cost</td>
+			<!--<td>Recuring Order</td>-->
+			<td>Request State</td>
+		</thead>
+		<tr th:each="requisition : ${requisitionList}">
+			
+			<td class="row">
+			<div  th:if="${currentUser.getUserID ne requisition.userID or currentUser.getRole() == 'BUDGETHOLDER'}">
+				<a class="link text-danger" th:href="@{/requisitions/BudgetHolder/decline/{id}(id=${requisition.primaryKey})}" onclick="return confirm('Are you sure you wish to decline?') ? true : false;" th:if="${currentUser.getRole == 'BUDGETHOLDER'}">
+					<span class="material-icons">delete</span>
+				</a>
+				<a class="link text-primary" th:href="@{/requisitions/BudgetHolder/accept/{id}(id=${requisition.primaryKey})}" onclick="return confirm('Are you sure you wish to accept & sign?') ? true : false;" th:if="${currentUser.getRole == 'BUDGETHOLDER'}">
+					<span class="material-icons">edit</span>
+				</a>
+				<a class="link text-danger" th:href="@{/requisitions/RequisitionOfficer/decline/{id}(id=${requisition.primaryKey})}" onclick="return confirm('Are you sure you wish to decline?') ? true : false;" th:if="${currentUser.getRole == 'REQUISITIONOFFICER'}">
+					<span class="material-icons">delete</span>
+				</a>
+				<a class="link text-primary" th:href="@{/requisitions/RequisitionOfficer/accept/{id}(id=${requisition.primaryKey})}" onclick="return confirm('Are you sure you wish to accept & sign?') ? true : false;" th:if="${currentUser.getRole == 'REQUISITIONOFFICER'}">
+					<span class="material-icons">edit</span>
+				</a>
+				<a class="link text-danger" th:href="@{/requisitions/FinanceOfficer/decline/{id}(id=${requisition.primaryKey})}" onclick="return confirm('Are you sure you wish to decline?') ? true : false;" th:if="${currentUser.getRole == 'FINANCEOFFICER'}">
+					<span class="material-icons">delete</span>
+				</a>
+				<a class="link text-primary" th:href="@{/requisitions/FinanceOfficer/accept/{id}(id=${requisition.primaryKey})}" onclick="return confirm('Are you sure you wish to accept & sign?') ? true : false;" th:if="${currentUser.getRole == 'FINANCEOFFICER'}">
+					<span class="material-icons">edit</span>
+				</a>
+			</div>
+			</td>
+			<td th:text="${requisition.dateSubmitted}"></td>
+			<td th:text="${requisition.name}"></td>
+			<td th:text="${requisition.roomNumber}"></td>
+			<td th:text="${requisition.email}"></td>
+			<td th:text="${requisition.supplierName}"></td>
+			<td th:text="${requisition.supplierAddress}"></td>
+			<td th:text="${requisition.supplierEmail}"></td>
+			<td th:text="${requisition.supplierPhoneNumber}"></td>
+			<td th:text="${requisition.item}"></td>
+			<td th:text="${requisition.itemDescription}"></td>
+			<td th:text="${requisition.quantity}"></td>
+			<td th:text="${requisition.estCost}"></td>
+			<!-- <td th:text="${requisition.isRecurring}"></td>-->
+			<td th:text="${requisition.requestState}"></td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>
