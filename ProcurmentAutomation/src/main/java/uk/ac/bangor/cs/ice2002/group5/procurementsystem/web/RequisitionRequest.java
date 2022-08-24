@@ -44,20 +44,28 @@ public class RequisitionRequest {
 	
 	@Column(nullable = false, length = 255)
 	private String supplierName;
-	@Column(nullable = false, length = 255)
+	
+	@Column(nullable = true, length = 255)
 	private String supplierAddress;
+	
 	@Column(nullable = false, length = 255)
 	private String supplierEmail;
+	
 	@Column(nullable = false, length = 255)
 	private String supplierPhoneNumber;
+	
 	@Column(nullable = false, length = 255)
 	private String item;
-	@Column(length = 255)
+	
+	@Column(nullable = true, length = 255)
 	private String itemDescription;
+	
 	@Column(nullable = false)
 	private int quantity;
+	
 	@Column(nullable = false)
 	private float estCost;
+	
 	@Column(nullable = false)
 	private boolean isRecurring;
 	
